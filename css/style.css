@@ -203,7 +203,7 @@ img {
 
 .header {
   position: relative;
-  background: url(/img/hero-bg-original.jpg) no-repeat center center/cover;
+  background: url("../img/hero-bg-original.jpg") no-repeat center center/cover;
   height: 100vh;
 }
 
