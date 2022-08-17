@@ -1,0 +1,240 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  --first-color: #aad922;
+  --first-color-light: #d9fd8b;
+  --first-color-alt: #a3d733;
+  --first-color-dark: #9dd02f;
+  --first-color-gray: #a5a99e;
+  --title-color: #11270b;
+  --title-color-black: #1d2020;
+  --text-color: #121717;
+  --text-color-light: #a2a9a9;
+  --white-color: #f9fbf7;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Red Hat Display", sans-serif;
+  --second-font: "Kaushan Script", cursive;
+  --bigger-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-bold: 700;
+  --font-black: 900;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+button,
+input {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background-color: var(--white-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-bold);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1124px;
+  margin-right: 1.5rem;
+  margin-left: 1.5rem;
+  padding: 40px;
+}
+
+
+/*=============== HEADER & NAV & HERO ===============*/
+.header{
+  background-image: url(/img/hero-bg.jpg);
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+
+}
+
+.nav__logo{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--first-color);
+  font-weight: var(--font-bold);
+  font-size: 1.5rem;
+}
+
+.nav__logo img{
+  width: 2rem;
+}
+
+.nav__toggle{
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 821px){
+  .nav__menu{
+    position: fixed;
+    background-color: #121717;
+    backdrop-filter: blur(32px);
+    -webkit-backdrop-filter: blur(32px);
+    top: 0;
+    right: -100%;
+    width: 50%;
+    height: 100%;
+    border-left: 2px solid var(--first-color-gray);
+    transition: right .3s;
+  }
+}
+
+.nav__list{
+  padding: 5rem 0 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.nav__link{
+  color: var(--white-color);
+  transition: color .3s;
+}
+
+.nav__link:hover{
+  color: var(--first-color);
+}
+
+.nav__close{
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+/* Show menu */
+.show-menu {
+  right: 0;
+}
+
+/* Active link */
+
+/* Hero */
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
+}
+.hero__content{
+  text-align: center;
+}
+
+.hero__title{
+  font-size: 4rem;
+}
+
+.hero_subtitle{
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.hero__btn{
+  display: inline-block;
+  background-color: #9dd02f;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  color: var(--second-color);
+  transition: 0.5s;
+}
+
+.hero__btn:hover{
+  transform: scale(1.1);
+}
+
+/*=============== MAIN ===============*/
+
+
+/* Show Scroll Up*/
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+/* For medium devices */
+
+/* For large devices */
+
+@media screen and (min-width: 821px){
+  .nav{
+    height: calc(var(--header-height) + 2rem);
+  }
+  .nav__menu{
+    width: initial;
+  }
+  .nav__toggle,
+  .nav__close{
+    display: none;
+  }
+
+  .nav__list{
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+    gap: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+
+  .nav__link{
+    color: var(--title-color);
+  }
+
+}
