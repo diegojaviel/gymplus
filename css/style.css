@@ -390,7 +390,7 @@ img {
 
 .section-b {
   position: relative;
-  background: url(/img/experimente.jpg) no-repeat center center/cover;
+  background: url("../img/experimente.jpg") no-repeat center center/cover;
   height: 75vh;
 }
 
@@ -511,7 +511,7 @@ img {
 /* Section D */
 .reviews {
   position: relative;
-  background: url(/img/depoimentos-bg.jpg) no-repeat center center/cover;
+  background: url("../img/depoimentos-bg.jpg") no-repeat center center/cover;
 }
 
 .reviews::before {
