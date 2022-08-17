@@ -329,7 +329,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20rem;
+  margin: 10rem;
 }
 .hero__content {
   text-align: center;
