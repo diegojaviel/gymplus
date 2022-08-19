@@ -1,0 +1,16 @@
+@import url("../css/style.css");
+
+.bg-contact {
+  background: url(../img/crossfit-gbee7b5307_1280.jpg) no-repeat center
+    center/cover;
+  height: 50vh;
+}
+
+.contact-title h1{
+  color: var(--first-color-light);
+
+}
+
+.bottom-line{
+  margin-bottom: 40px;
+}

@@ -248,7 +248,7 @@ img {
 
 .nav__toggle {
   font-size: 2rem;
-  color: var(--title-color);
+  color: var(--first-color);
   cursor: pointer;
 }
 
@@ -265,8 +265,6 @@ img {
   .nav__menu {
     position: fixed;
     background-color: #121717;
-    /* backdrop-filter: blur(32px);
-    -webkit-backdrop-filter: blur(32px); */
     top: 0;
     right: -100%;
     width: 50%;
@@ -284,8 +282,33 @@ img {
     font-size: 1.2rem;
   }
 }
-
 .nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.nav__link {
+  display: inline-block;
+  padding: 16px 0;
+  position: relative;
+}
+.nav__link::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  background: var(--first-color);
+  position: absolute;
+  margin-top: 2px;
+  transition: 0.3s;
+}
+
+.nav__link:hover::after,
+.nav__link.ativo::after {
+  width: 100%;
+}
+/* .nav__list {
   padding: 5rem 0 0 3rem;
   display: flex;
   flex-direction: column;
@@ -302,7 +325,7 @@ img {
   color: var(--first-color);
   border-bottom: 1px var(--first-color) solid;
   padding-bottom: 0.5rem;
-}
+} */
 
 .nav__close {
   position: absolute;
@@ -574,15 +597,44 @@ img {
   background: #333;
 }
 
-.main-footer .container .policies a {
+/* .main-footer .container .policies a {
   font-size: 1.2rem;
   padding: 0 0.8rem;
   color: #fff;
-}
+} */
 
-.main-footer .container .policies a:hover {
+/* .main-footer .container .policies a:hover {
   color: var(--first-color);
   border-bottom: 1px var(--first-color) solid;
+} */
+
+.policies-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.policies-links a{
+  display: inline-block;
+  color: #fff;
+  padding: 16px 0;
+  position: relative;
+}
+
+.policies-links a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  background: var(--first-color);
+  position: absolute;
+  margin-top: 2px;
+  transition: 0.3s;
+}
+
+.policies-links a:hover::after,
+.policies-links a:hover{
+  color: var(--first-color);
+  width: 100%;
 }
 
 .main-footer .container .socials a i {
