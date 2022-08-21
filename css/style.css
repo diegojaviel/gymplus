@@ -40,9 +40,7 @@
   margin: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+
 
 body,
 button,
@@ -86,7 +84,7 @@ img {
   margin: 0 auto;
   padding: 40px;
   text-align: center;
-}
+  }
 
 .btn {
   display: inline-block;
@@ -285,13 +283,16 @@ img {
 .nav__list {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 20px;
+  flex-direction: column;
+  padding-top: 40px;
 }
 
 .nav__link {
   display: inline-block;
   padding: 16px 0;
   position: relative;
+  color: var(--first-color);
 }
 .nav__link::after {
   content: "";
