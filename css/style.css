@@ -40,8 +40,6 @@
   margin: 0;
 }
 
-
-
 body,
 button,
 input {
@@ -84,7 +82,7 @@ img {
   margin: 0 auto;
   padding: 40px;
   text-align: center;
-  }
+}
 
 .btn {
   display: inline-block;
@@ -481,6 +479,7 @@ img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
+  transition: all 0.4s ease-in;
 }
 
 .card div,
@@ -503,14 +502,11 @@ img {
 }
 
 .card:hover {
-  background-image: linear-gradient(
-    160deg,
-    rgb(89, 88, 88) 10%,
-    rgb(108, 179, 88) 52%,
-    rgb(34, 77, 9) 100%
-  );
   color: #fff;
   text-decoration: none;
+}
+.card:hover::before {
+  background: rgb(0, 0, 0, 0.8);
 }
 
 .plans-item {
@@ -614,7 +610,7 @@ img {
   flex-wrap: wrap;
   gap: 40px;
 }
-.policies-links a{
+.policies-links a {
   display: inline-block;
   color: #fff;
   padding: 16px 0;
@@ -633,7 +629,7 @@ img {
 }
 
 .policies-links a:hover::after,
-.policies-links a:hover{
+.policies-links a:hover {
   color: var(--first-color);
   width: 100%;
 }
