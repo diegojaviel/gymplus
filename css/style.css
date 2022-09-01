@@ -85,6 +85,7 @@ img {
 }
 
 .btn {
+  font-size: 1rem;
   display: inline-block;
   padding: 1rem 1.2rem;
   border-radius: 5px;
@@ -175,6 +176,11 @@ img {
   font-size: 1.5rem;
 }
 
+.text-bg-grad {
+  background-image: linear-gradient(90deg, #3b8426, var(--first-color-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .text-thin {
   font-weight: 400;
 }
@@ -374,7 +380,6 @@ img {
 }
 
 .hero__btn__div a {
-  font-size: 1.5rem;
   font-weight: 700;
 }
 /*=============== MAIN ===============*/
@@ -439,15 +444,11 @@ img {
 .section-b .container h2 span {
   display: inline-block;
   border-bottom: 2px var(--first-color-alt) solid;
-  background-image: linear-gradient(90deg, #3b8426, var(--first-color-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .section-b p {
   color: var(--white-color);
 }
 .section-b a {
-  font-size: 1.5rem;
   font-weight: 700;
 }
 /*=============== Section B: Experimental End===============*/
