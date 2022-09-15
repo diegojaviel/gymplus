@@ -1,9 +1,9 @@
 @import url("../css/style.css");
 
-.header {
+.header.sobre {
   position: relative;
   background: url("../img/sobre-bg-1.jpg") no-repeat center center/cover;
-  height: 50vh;
+  min-height: 50vh;
 }
 
 .about-title h1 {

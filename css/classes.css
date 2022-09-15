@@ -1,7 +1,5 @@
-.bg-classes {
+.header.bg-classes {
   background: url(../img/risen-wang-20jX9b35r_M-unsplash.jpg) no-repeat center
     center/cover;
-  height: 50vh;
+  min-height: 50vh;
 }
-
-

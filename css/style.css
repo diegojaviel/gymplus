@@ -206,7 +206,7 @@ img {
 .header {
   position: relative;
   background: url("../img/hero-bg-original.jpg") no-repeat center center/cover;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .header::before {
@@ -360,7 +360,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 8rem;
+  padding-top: 7rem;
 }
 .hero__content {
   text-align: center;
@@ -834,5 +834,11 @@ img {
 
   .nav__link {
     color: var(--first-color);
+  }
+}
+@media (max-height: 700px) {
+  .hero {
+    padding-bottom: 4rem;
+    padding-top: 4rem;
   }
 }
