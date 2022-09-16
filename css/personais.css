@@ -16,6 +16,10 @@ header .about-title {
   justify-content: center;
 }
 
+.personais-title h2 {
+  color: var(--first-color-light);
+}
+
 main .container {
   max-width: 1124px;
   margin: 0 auto;
@@ -30,17 +34,17 @@ main .container {
   margin: 2rem 0rem;
 }
 
-.classes-container p {
+.personais-container p {
   padding: 1rem;
 }
 
-.classes-grid {
+.personais-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
-.classes-card {
+.personais-card {
   position: relative;
   background: url(https://www.flyefit.ie/wp-content/uploads/2021/01/K.jpg)
     no-repeat center center/cover;
@@ -50,33 +54,33 @@ main .container {
   text-transform: uppercase;
   color: var(--first-color);
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
-  border-radius: 10px;
+  border-radius: 5px;
   transition: all 0.9s;
   height: 400px;
 }
 
-.classes-card:nth-child(2) {
+.personais-card:nth-child(2) {
   background: url(https://www.flyefit.ie/wp-content/uploads/2021/03/Dave-lawlor.jpg)
     no-repeat center center/cover;
 }
-.classes-card:nth-child(3) {
+.personais-card:nth-child(3) {
   background: url(https://www.flyefit.ie/wp-content/uploads/2021/10/Edel.png)
     no-repeat center center/cover;
 }
-.classes-card:nth-child(4) {
+.personais-card:nth-child(4) {
   background: url(https://www.flyefit.ie/wp-content/uploads/2020/12/TERR4543.jpg)
     no-repeat center center/cover;
 }
-.classes-card:nth-child(5) {
+.personais-card:nth-child(5) {
   background: url(https://www.flyefit.ie/wp-content/uploads/2021/02/ciara-grazier-2-e1619418542205.jpg)
     no-repeat center center/cover;
 }
-.classes-card:nth-child(6) {
+.personais-card:nth-child(6) {
   background: url(https://www.flyefit.ie/wp-content/uploads/2021/03/edel-cummins.jpg)
     no-repeat center center/cover;
 }
 
-.classes-card::before {
+.personais-card::before {
   content: "";
   position: absolute;
   background: rgba(0, 0, 0, 0.6);
@@ -88,11 +92,11 @@ main .container {
   transition: all 0.4s ease-in;
 }
 
-.classes-card:hover::before {
+.personais-card:hover::before {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.classes-body {
+.personais-body {
   position: relative;
   display: flex;
   align-items: center;
@@ -105,20 +109,20 @@ main .container {
   transition: all 1s ease;
 }
 
-.classes-body:hover {
+.personais-body:hover {
   gap: 10rem;
   transition: gap 1s ease;
 }
 
-.classes-body div {
+.personais-body div {
   margin-bottom: 2rem;
 }
 
-.classes-body h2 {
+.personais-body h2 {
   color: white;
 }
 
-.classes-body a {
+.personais-body a {
   text-decoration: none;
   font-weight: bold;
 }
@@ -131,7 +135,7 @@ main .container {
     font-size: 5rem;
   }
 
-  .classes-grid {
+  .personais-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -141,7 +145,7 @@ main .container {
 }
 
 @media (max-width: 980px) {
-  .classes-grid {
+  .personais-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -150,7 +154,7 @@ main .container {
   header div h2 {
     font-size: 3rem;
   }
-  .classes-grid {
+  .personais-grid {
     grid-template-columns: repeat(1, 1fr);
   }
 }
