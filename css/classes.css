@@ -3,3 +3,229 @@
     center/cover;
   min-height: 50vh;
 }
+
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(203, 228, 203);
+}
+
+.classes-showcase {
+  height: 100vh;
+}
+
+.classes-container {
+  max-width: 1024px;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.classes-card-grid {
+  display: grid;
+  grid-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(3, 250px);
+  padding: 1rem;
+
+  font-family: var(--font-sans);
+  overflow: hidden;
+}
+
+.classes-card {
+  position: relative;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  color: black;
+  background-color: whitesmoke;
+  box-shadow: 2px 2px 4px black;
+}
+
+.classes-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-image: url("https://www.flyefit.ie/wp-content/uploads/2021/01/TERR5176.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+
+.classes-card:nth-child(2)::before {
+  background-image: url("https://www.flyefit.ie/wp-content/uploads/2021/08/TERR5713.jpg");
+}
+.classes-card:nth-child(3)::before {
+  background-image: url("	https://www.flyefit.ie/wp-content/uploads/2021/05/DanceHITT.jpg");
+}
+
+.classes-card:nth-child(4)::before {
+  background-image: url("https://www.flyefit.ie/wp-content/uploads/2021/08/TERR5631.jpg");
+}
+.classes-card:nth-child(5)::before {
+  background-image: url("https://www.flyefit.ie/wp-content/uploads/2021/01/TERR5439.jpg");
+}
+.classes-card:nth-child(6)::before {
+  background-image: url("https://www.flyefit.ie/wp-content/uploads/2021/01/TERY2955-scaled.jpg");
+}
+.classes-card:nth-child(7)::before {
+  background-image: url("https://www.flyefit.ie/wp-content/uploads/2022/01/Boxercise-1-Thumbnail.png");
+}
+
+.classes-card::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(
+    to bottom,
+    hsla(0, 0%, 0%, 0) 0%,
+    hsla(0, 0%, 0%, 0.009) 11.7%,
+    hsla(0, 0%, 0%, 0.034) 22.1%,
+    hsla(0, 0%, 0%, 0.072) 31.2%,
+    hsla(0, 0%, 0%, 0.123) 39.4%,
+    hsla(0, 0%, 0%, 0.182) 46.6%,
+    hsla(0, 0%, 0%, 0.249) 53.1%,
+    hsla(0, 0%, 0%, 0.32) 58.9%,
+    hsla(0, 0%, 0%, 0.394) 64.3%,
+    hsla(0, 0%, 0%, 0.468) 69.3%,
+    hsla(0, 0%, 0%, 0.54) 74.1%,
+    hsla(0, 0%, 0%, 0.607) 78.8%,
+    hsla(0, 0%, 0%, 0.668) 83.6%,
+    hsla(0, 0%, 0%, 0.721) 88.7%,
+    hsla(0, 0%, 0%, 0.762) 94.1%,
+    hsla(0, 0%, 0%, 0.79) 100%
+  );
+  transform: translateY(-10%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+
+.classes-card:hover:after {
+  transform: translateY(-50%);
+}
+.classes-card:hover:before {
+  transform: translateY(-5%);
+}
+
+.classes-card-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0.5rem;
+  transform: translateY(70%);
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+
+.classes-card:hover .classes-card-body {
+  transform: translateY(-20%);
+}
+
+.classes-card-title {
+  color: whitesmoke;
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.classes-card-text {
+  font-family: var(--font-serif);
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 1.35;
+  opacity: 0;
+  color: #aad922;
+  margin-bottom: 1.2rem;
+}
+
+.classes-btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+  opacity: 0;
+  margin-bottom: -2rem;
+}
+
+.classes-card:hover .classes-card-body * {
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+@media (max-width: 850px) {
+  .classes-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  .classes-card-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .classes-card-body {
+    transform: translateY(-60%);
+  }
+
+  .classes-card-text {
+    display: none;
+  }
+
+  .classes-card-body button {
+    opacity: 1;
+  }
+
+  .classes-card:hover .classes-card-body {
+    transform: translateY(-60%);
+  }
+
+  .classes-card:after {
+    transform: translateY(-45%);
+  }
+
+  .classes-card:before {
+    height: 100%;
+    transform: translateX(0);
+  }
+
+  .classes-card:hover:before,
+  .classes-card:hover:before {
+    transform: translate(0);
+  }
+}
