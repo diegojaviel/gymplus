@@ -197,6 +197,10 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 2rem;
   }
+
+  .classes-card {
+    padding: 1rem;
+  }
 }
 @media (max-width: 600px) {
   .classes-card-grid {
