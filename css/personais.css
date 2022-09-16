@@ -23,7 +23,7 @@ main .container {
   text-align: center;
 }
 
-.classes-container {
+.personais-container {
   display: flex;
   align-items: center;
   flex-direction: column;
