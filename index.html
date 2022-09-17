@@ -17,6 +17,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <script defer src="./js/observer.js"></script>
 
     <title>GymPlus+ | Inicio</title>
   </head>
@@ -84,7 +85,7 @@
     <main class="main">
       <!-- Section A: Services -->
       <section id="section-a" class="section-a bg-light py-3">
-        <div class="flex-container container py-2">
+        <div class="hiddenLeft flex-container container py-2">
           <h2 class="text-bold title-text-2">O QUE TEMOS DE ESPECIAL?</h2>
           <div class="bottom-line"></div>
           <p class="lead my-1">
@@ -125,12 +126,12 @@
       </section>
 
       <!-- Section B: Aula Experimental -->
-      <div class="section-b" id="section-b">
+      <section class="section-b" id="section-b">
         <div
-          style="max-height: 100%"
-          class="flex-container container text-center py-2"
+          style="min-height: 100%"
+          class="hiddenRight flex-container container text-center py-2"
         >
-          <h2 class="title-text-2 py-4">
+          <h2 class="title-text-2 py-2">
             Venha Ter Uma Aula Experimental
             <span class="text-bold light-text text-bg-grad"
               >Totalmente Gratis</span
@@ -146,11 +147,11 @@
           </p>
           <a href="contact.html" class="btn btn-grad">Click Aqui!</a>
         </div>
-      </div>
+      </section>
 
       <!-- Section C: Precos -->
       <section id="section-c" class="section-c bg-light py-3">
-        <div class="flex-container container py-2">
+        <div class="hiddenLeft flex-container container py-2">
           <h2 class="text-bold title-text-2">NOSSOS PLANOS</h2>
           <div class="bottom-line"></div>
           <p class="lead my-1">
@@ -217,8 +218,8 @@
       </section>
 
       <!-- Section D: Reviews -->
-      <section id="reviews" class="reviews py-2">
-        <div class="container">
+      <section id="reviews" class="section-d reviews py-2">
+        <div class="hiddenRight container">
           <h2 class="title-text-2">Reviews dos Nossos Clientes</h2>
           <div class="bottom-line"></div>
           <div class="reviews-grid py-3">
