@@ -787,8 +787,7 @@ img {
     font-size: 1rem;
   }
 
-  .services-grid,
-  .reviews .review-container {
+  .services-grid {
     grid-template-columns: repeat(1, 1fr);
   }
 
@@ -803,7 +802,19 @@ img {
 
   .plans-grid .card {
     padding: 2rem;
-    height: 70vh;
+    height: 600px;
+    transform: scale(1);
+  }
+  .reviews-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .arrow svg {
+    width: 30px;
+    height: 30px;
   }
 
   .main-footer .container {

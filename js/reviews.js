@@ -67,3 +67,5 @@ const moveSlider = (e) => {
 
 arrowRight.addEventListener("click", moveSlider);
 arrowLeft.addEventListener("click", moveSlider);
+
+document.addEventListener("DOMContentLoaded", loadReview(slideIndex));
