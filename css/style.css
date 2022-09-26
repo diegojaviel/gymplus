@@ -54,6 +54,7 @@ body {
   background-color: var(--white-color);
   color: var(--text-color);
   line-height: 1.6;
+  overflow: overlay;
 }
 
 h1,
@@ -74,6 +75,19 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+section {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(170, 217, 34, 0.4);
 }
 
 /*=============== REUSABLE CSS CLASSES / UTILITIES ===============*/
