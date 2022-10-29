@@ -18,14 +18,18 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
-  margin-top: 40px;
   align-items: center;
   justify-content: center;
   margin-bottom: 60px;
+  padding: 1.5rem;
 }
 
 .nossa-historia-content img {
   border-radius: 5px;
+  min-height: 100%;
+}
+video{
+  display: none;
 }
 
 .quote {
@@ -63,9 +67,6 @@
   justify-content: center;
 }
 .unidades {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0 40px;
   padding-top: 120px;
   padding-bottom: 120px;
   position: relative;
@@ -80,26 +81,30 @@
   margin-bottom: 60px;
 }
 
+.unidades-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+
 .unidades-item {
   border-radius: 4px;
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
   background: #d9d9d9;
+  width: 400px;
+  
 }
 
 .unidades-conteudo {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   gap: 32px 16px;
   padding: 32px;
 }
 
-.unidades-conteudo h3,
-.unidades-horario {
-  grid-column: 1/-1;
-}
-
 .unidades-conteudo-titulo {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .unidades-dados {
@@ -141,10 +146,39 @@
   height: auto;
   border-radius: 5px;
 } */
-
-@media (max-width: 600px) {
-  .academias-fotos {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
+@media(max-width:567px){
+  .unidades-container{
+    flex-direction: column;
   }
+  .quote{
+    display: block;
+  }
+
+  .quote-content{
+    padding: 5rem;
+  }
+  .quote div:first-child {
+    display: none;
+  }
+
+  .quote-text{
+    text-align: center;
+  }
+  }
+  
+@media(max-width: 641px){
+  .nossa-historia-content {
+    grid-template-columns:  1fr;
+    gap: 4rem;
+    padding:0  1.5rem 0 1.5rem;
+  }
+  .nossa-historia-content p{
+    padding-right:2rem;
+    padding-left:2rem;
+  }
+  video{
+    display: block;
+  }
+  .nossa-historia-content img {display: none;}
+
 }
