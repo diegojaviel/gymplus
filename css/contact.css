@@ -159,7 +159,7 @@
     flex-direction: column;
   }
 
-  .flex-container p{
+   p.lead{
     font-size: 1.3rem;
   }
 
