@@ -34,12 +34,14 @@
 .contato-formulario {
   border-radius: 0 5px 5px 0;
   background: #d9d9d9;
+  width: 70%;
   flex-shrink: 1;
 }
 
 .contato-dados {
   border-radius: 5px 0 0 5px;
   background: #19430d;
+  min-width: 30%;
   flex: 1 0 auto;
 }
 
@@ -144,14 +146,6 @@
   cursor: pointer;
 }
 
-@media (max-width: 600px) {
-  .form {
-    grid-template-columns: 1fr;
-  }
-  .form .col-2 {
-    grid-column: 1;
-  }
-}
 
 
 @media (max-width: 768px){
@@ -168,12 +162,15 @@
   }
 
   .contato-dados{
-    
     display: flex;
     flex-direction: column;
    align-items: center;
    justify-items: center;
     padding: 1.5rem .5rem;
+  }
+
+  .contato-formulario{
+    width: 100%;
   }
   
   .contato-endereco{
