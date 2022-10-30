@@ -1,7 +1,8 @@
-.bg-privacy {
+.header.bg-privacy {
+  
   background: url("https://www.flyefit.ie/wp-content/uploads/2020/12/TERY3900.jpg")
     center center/cover;
-  height: 50vh;
+  min-height: 50vh;
 }
 
 .header::before {
