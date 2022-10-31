@@ -1,8 +1,7 @@
 :root {
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
-  --font-sans: "Rubik", sans-serif;
-  --font-serif: "Cardo", serif;
+
 }
 
 .header.bg-classes {
@@ -10,6 +9,9 @@
     center/cover;
   min-height: 50vh;
 }
+
+
+
 .classes-title h2 {
   color: var(--first-color-light);
 }
@@ -29,7 +31,6 @@
   justify-items: center;
   grid-template-columns: repeat(3, 300px);
   padding: 1rem;
-  font-family: var(--font-sans);
   overflow: hidden;
 }
 
